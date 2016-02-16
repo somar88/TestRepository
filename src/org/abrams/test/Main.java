@@ -10,6 +10,16 @@ public class Main {
 		int x = 0;
 		x += 1;
 		System.out.println(x);
+
+		
+		System.out.println("Hello World");
+
+		
+		System.out.println("Hello World");
+		
+		System.out.println("Hello World");
+		
+		System.out.println("Hello World");
 		
 	}
 	
