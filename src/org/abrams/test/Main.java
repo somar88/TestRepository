@@ -5,8 +5,11 @@ public class Main {
 	public static void main(String[] args){
 		
 		System.out.println("Hello World");
-		TestClass tc;
-		tc = new TestClass();
+//		TestClass tc;
+//		tc = new TestClass();
+		int x = 0;
+		x += 1;
+		System.out.println(x);
 		
 	}
 	
