@@ -4,17 +4,29 @@ import java.util.Date;
 
 public class Person {
 
-	private String First_Name;
-	private String Last_Name;
-	private String Middle_Name;
-	private Date Birth_Date;
-	private Address address;
+	protected String First_Name;
+	protected String Last_Name;
+	protected String Middle_Name;
+	protected Date Birth_Date;
+	protected Address address;
 
 	public Person() {
 		this.First_Name = "";
 		this.Last_Name = "";
 		this.Middle_Name = "";
 		this.Birth_Date = new Date();
+	}
+
+	public Person(String firstName, String lastName, String middleName) {
+		this.First_Name = firstName;
+		this.Last_Name = lastName;
+		this.Middle_Name = middleName;
+		this.Birth_Date = new Date();
+	}
+
+	@Override
+	public String toString() {
+		return this.First_Name + ", " + this.Last_Name + ", " + this.Middle_Name + ", " + this.Birth_Date.toString();
 	}
 
 	public String getFirst_Name() {

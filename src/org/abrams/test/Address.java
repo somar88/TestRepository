@@ -1,5 +1,7 @@
 package org.abrams.test;
 
+import org.abrams.test.utilities.InputManager;
+
 public class Address {
 
 	private String country;
@@ -8,6 +10,7 @@ public class Address {
 	private String Street;
 	private String Street_Number;
 
+	// Constructor
 	public Address() {
 		this.country = "";
 		this.city = "";
@@ -16,12 +19,25 @@ public class Address {
 		this.Street_Number = "";
 	}
 
+	// to String
+	@Override
+	public String toString(){
+		return 
+				this.Zip + " " +
+				this.city + "\n" +
+				this.Street + " " +
+				this.Street_Number + "\n" +
+				this.country;
+	}
+
+	// getters and setters
+
 	public String getCountry() {
 		return country;
 	}
 
 	public void setCountry(String country) {
-		this.country = country;
+		this.country = InputManager.getInput("please enter country: ");
 	}
 
 	public String getCity() {
@@ -29,7 +45,7 @@ public class Address {
 	}
 
 	public void setCity(String city) {
-		this.city = city;
+		this.city = InputManager.getInput("please enter city: ");
 	}
 
 	public String getZip() {
@@ -37,7 +53,7 @@ public class Address {
 	}
 
 	public void setZip(String zip) {
-		Zip = zip;
+		Zip = InputManager.getInput("please enter country Zip Code: ");
 	}
 
 	public String getStreet() {
@@ -45,7 +61,7 @@ public class Address {
 	}
 
 	public void setStreet(String street) {
-		Street = street;
+		Street = InputManager.getInput("please enter street name: ");
 	}
 
 	public String getStreet_Number() {
@@ -53,7 +69,7 @@ public class Address {
 	}
 
 	public void setStreet_Number(String street_Number) {
-		Street_Number = street_Number;
+		Street_Number = InputManager.getInput("please enter street number: ");
 	}
 
 }
