@@ -13,7 +13,5 @@ public class Management {
 			company.addEmployee();
 		}
 		company.emplyeeListPrint();
-		company.searchEmployeeID();
-
 	}
 }

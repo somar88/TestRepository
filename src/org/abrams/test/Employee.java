@@ -23,6 +23,7 @@ public class Employee extends Person {
 		this.employee_ID = new Random().nextLong();
 		this.position = Position.SALES_MAN;
 		this.date_Of_Employment = new Date();
+		this.manageEmployeeInfo();
 	}
 
 	@Override
@@ -36,6 +37,7 @@ public class Employee extends Person {
 		this.first_Name = InputManager.getInput("Employee first name: ");
 		this.last_Name = InputManager.getInput("Employee last name: ");
 		this.middle_Name = InputManager.getInput("Employee middle name: ");
+		this.address.setAddress();
 		System.out.println("done...! \n-------------------------------------------------\n");
 
 	}

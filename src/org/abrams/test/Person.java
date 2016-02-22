@@ -2,7 +2,7 @@ package org.abrams.test;
 
 import java.util.Date;
 
-public class Person {
+public abstract class Person {
 
 	protected String first_Name;
 	protected String last_Name;

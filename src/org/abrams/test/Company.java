@@ -76,9 +76,25 @@ public class Company {
 		try {
 			long employeeID = Long.parseLong((InputManager.getInput("please enter the employee ID to search for: ")).trim());
 			for (Employee employee : employee_List) {
-				System.out.println(employee.getEmployee_ID() + "\n" + employeeID);
 				if (employeeID == employee.getEmployee_ID()) {
 					System.out.println(employee);
+					return;
+				}
+			}
+			System.out.println("Sorry there is no Employee with this name in the Company!");
+
+		} catch (Exception e) {
+			System.out.println("Please enter a valid in ID");
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void editEmployeeInfoID() {
+		try {
+			long employeeID = Long.parseLong((InputManager.getInput("please enter the ID of the employee you want to edit: ")).trim());
+			for (Employee employee : employee_List) {
+				if (employeeID == employee.getEmployee_ID()) {
+					employee.manageEmployeeInfo();
 					return;
 				}
 			}
