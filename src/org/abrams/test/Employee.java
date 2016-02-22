@@ -37,7 +37,7 @@ public class Employee extends Person {
 		this.last_Name = InputManager.getInput("Employee last name: ");
 		this.middle_Name = InputManager.getInput("Employee middle name: ");
 		System.out.println("done...! \n-------------------------------------------------\n");
-		
+
 	}
 
 	// Setters and getters

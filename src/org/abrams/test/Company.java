@@ -74,9 +74,10 @@ public class Company {
 
 	public void searchEmployeeID() {
 		try {
-			Long employeeID = Long.parseLong(InputManager.getInput("please enter the employee ID to search for: "));
+			long employeeID = Long.parseLong((InputManager.getInput("please enter the employee ID to search for: ")).trim());
 			for (Employee employee : employee_List) {
-				if (employee.getEmployee_ID() == employeeID) {
+				System.out.println(employee.getEmployee_ID() + "\n" + employeeID);
+				if (employeeID == employee.getEmployee_ID()) {
 					System.out.println(employee);
 					return;
 				}

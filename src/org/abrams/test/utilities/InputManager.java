@@ -8,6 +8,6 @@ public class InputManager {
 
 	public static String getInput(String msg) {
 		System.out.println(msg);
-		return scanner.nextLine();
+		return scanner.nextLine().trim();
 	}
 }
