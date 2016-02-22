@@ -3,9 +3,11 @@ package org.abrams.test;
 import java.util.Date;
 import java.util.Random;
 
+import org.abrams.test.utilities.InputManager;
+
 public class Employee extends Person {
 
-	private Long employee_ID;
+	private long employee_ID;
 	private Position position;
 	private Date date_Of_Employment;
 
@@ -25,14 +27,31 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return "ID: " + this.employee_ID + "\n" + "First name: " + this.First_Name + "\n" + "Last name: "
-				+ this.Last_Name + "\n" + "Middle name: " + this.Middle_Name + "\n" + "Date of Birth: "
-				+ this.Birth_Date.toString() + "\n" + "Position: " + this.position + "\n" + "Date of Employment: "
-				+ this.date_Of_Employment + "\n";
+		return "ID: " + this.employee_ID + "\n" + super.toString() + "\n" + "Position: " + this.position + "\n"
+				+ "Date of Employment: " + this.date_Of_Employment + "\n";
 	}
+
+	public void manageEmployeeInfo() {
+		System.out.println("Please enter the employee Infos:");
+		this.first_Name = InputManager.getInput("Employee first name: ");
+		this.last_Name = InputManager.getInput("Employee last name: ");
+		this.middle_Name = InputManager.getInput("Employee middle name: ");
+		System.out.println("done...! \n-------------------------------------------------\n");
+		
+	}
+
+	// Setters and getters
 
 	public Position getPosition() {
 		return position;
+	}
+
+	public Long getEmployee_ID() {
+		return this.employee_ID;
+	}
+
+	public void setEmployee_ID(Long employee_ID) {
+		this.employee_ID = employee_ID;
 	}
 
 	public void setPosition(Position position) {

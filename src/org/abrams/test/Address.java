@@ -25,46 +25,55 @@ public class Address {
 		return this.Zip + " " + this.city + "\n" + this.Street + " " + this.Street_Number + "\n" + this.country;
 	}
 
+	public void setAddress() {
+		this.setCountry();
+		this.setZip();
+		this.setCity();
+		this.setStreet();
+		this.setStreet_Number();
+
+	}
+
 	// getters and setters
 
 	public String getCountry() {
-		return country;
+		return this.country;
 	}
 
-	public void setCountry(String country) {
+	public void setCountry() {
 		this.country = InputManager.getInput("please enter country: ");
 	}
 
 	public String getCity() {
-		return city;
+		return this.city;
 	}
 
-	public void setCity(String city) {
+	public void setCity() {
 		this.city = InputManager.getInput("please enter city: ");
 	}
 
 	public String getZip() {
-		return Zip;
+		return this.Zip;
 	}
 
-	public void setZip(String zip) {
-		Zip = InputManager.getInput("please enter country Zip Code: ");
+	public void setZip() {
+		this.Zip = InputManager.getInput("please enter country Zip Code: ");
 	}
 
 	public String getStreet() {
-		return Street;
+		return this.Street;
 	}
 
-	public void setStreet(String street) {
-		Street = InputManager.getInput("please enter street name: ");
+	public void setStreet() {
+		this.Street = InputManager.getInput("please enter street name: ");
 	}
 
 	public String getStreet_Number() {
-		return Street_Number;
+		return this.Street_Number;
 	}
 
-	public void setStreet_Number(String street_Number) {
-		Street_Number = InputManager.getInput("please enter street number: ");
+	public void setStreet_Number() {
+		this.Street_Number = InputManager.getInput("please enter street number: ");
 	}
 
 }
