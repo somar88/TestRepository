@@ -21,13 +21,8 @@ public class Address {
 
 	// to String
 	@Override
-	public String toString(){
-		return 
-				this.Zip + " " +
-				this.city + "\n" +
-				this.Street + " " +
-				this.Street_Number + "\n" +
-				this.country;
+	public String toString() {
+		return this.Zip + " " + this.city + "\n" + this.Street + " " + this.Street_Number + "\n" + this.country;
 	}
 
 	// getters and setters
