@@ -1,4 +1,4 @@
-package org.abrams.test;
+package org.abrams.test.model;
 
 public enum Position {
 	CEO("CEO"), MANAGER("Manager"), SALES_MAN("Sales Man"), TRAINING("Training");

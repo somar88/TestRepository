@@ -1,4 +1,4 @@
-package org.abrams.test;
+package org.abrams.test.model;
 
 import java.util.Date;
 import java.util.Random;
